@@ -4,87 +4,105 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="dist/output.css">
+
+
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      background-color: #d9d9d9;
+      padding: 30px;
+    }
+
+    header nav h1 {
+      text-align: center;
+      font-size: medium;
+    }
+    
+    .loan {
+      padding-top: 150px;
+      padding-bottom: 80px;
+      display: flex;
+      justify-content: space-around;
+    }
+  </style>
+
+  
 </head>
 <body>
-  <header>
-    <section class="first">
-      <h1>
-        Loan simulator
-      </h1>
-      <p>Simulate your loan and visualize your results easily</p>
-    </section>
+  
+  <header class="bg-gray-100 text-center py-6">
+    <nav>
+      <h1 class="text-gray-800 font-semibold">Loan Simulator</h1>
+      <p class="text-gray-500 text-sm">Simulate your loan and visualize your results easily</p>
+    </nav>
   </header>
 
 
-  <section class="btn">
-    <div class="btn-1">
-      <button>House<button>
-    </div>
 
-    <div class="btn-2">
-      <button>Apartement</button>
-    </div>
 
-    <div class="btn-3">
-        <button>Business</button>
-    </div>
+ <section class="main-cont">
+  <div class="loan">
+  <button class="bg-gray-200 px-4 py-2 rounded-md text-gray-700 capitalize">house</button>
+  <button class="bg-gray-200 px-4 py-2 rounded-md text-gray-700 capitalize">apartment</button>
+  <button class="bg-gray-200 px-4 py-2 rounded-md text-gray-700 capitalize">business</button>
+  <button class="bg-gray-200 px-4 py-2 rounded-md text-gray-700 capitalize">personal</button>
+  <button class="bg-gray-200 px-4 py-2 rounded-md text-gray-700 capitalize">project</button>
+  </div>
+</section>
 
-    <div class="btn-4">
-      <button>Personal</button>
-    </div>
-
-    <div class="btn-5">
-      <button>Project</button>
-    </div>
-
-  </section>
-    <section class="user">
-      <div class="put">
-        <input id="loan-amount" type="number" name="amount";" placeholder="Loan Amount" min="0">
-      </div>
-
-      <div class="2inputs">
-        <div class="put-1">
-          <input type="number" id="duration" name="Duration" placeholder="duration" >
-        </div>
-
-        <select name="years" id="years">
-          <option>years</option>
+    <section class="flex flex-col items-center gap-4">
+      <input type="number" placeholder="Loan Amount" class="w-80 bg-gray-200 rounded-md px-4 py-2 focus:outline-none">
+  
+    <div class="flex gap-2">
+      <input type="number" placeholder="Duration" class="w-52 bg-gray-200 rounded-md px-4 py-2 focus:outline-none">
+        <select class="bg-gray-200 rounded-md px-4 py-2">
+          <option>Years</option>
         </select>
-      </div>
-
-      <div class="put-2">
-        <input type="number" id="salary" name="salary" placeholder="Monthly Salary"> 
-      </div>
-
-
-      <div class="calculate">
-        <button>Calculate</button>
-      </div>
-    </section>
-
-  <section class="main-card">
-    <div class="results">
-      <h3>Your result</h3>
     </div>
 
-    <div>
-      <div class="monthly-payment"></div>
+    <input type="number" placeholder="Monthly Salary" class="w-80 bg-gray-200 rounded-md px-4 py-2 focus:outline-none">
 
-      <div class="Total Interest"></div>
-
-      <div class="Total to pay"></div>
-    </div>
-
-    <div>
-      <img src="images/warning.png" class="warning">
-      <p>Monthly payment exceeds 40% of your salary</p>
-    </div>
-
-    <div class="footer-card">
-      <h3>View details<h3> 
-    </div>
+    <button class="bg-indigo-700 text-white px-6 py-2 rounded-md w-80 hover:bg-indigo-800 transition">
+      Calculate
+    </button>
   </section>
+
+
+  <section class="text-center my-8">
+  <h3 class="font-semibold mb-4">Your Result</h3>
+
+  <div class="flex justify-center gap-4">
+    <div class="border rounded-md px-4 py-3">
+      <p class="text-gray-500 text-sm">Monthly Payment</p>
+      <p class="font-semibold">$0.00</p>
+    </div>
+    <div class="border rounded-md px-4 py-3">
+      <p class="text-gray-500 text-sm">Monthly Payment</p>
+      <p class="font-semibold">$0.00</p>
+    </div>
+    <div class="border rounded-md px-4 py-3">
+      <p class="text-gray-500 text-sm">Monthly Payment</p>
+      <p class="font-semibold">$0.00</p>
+    </div>
+  </div>
+
+  <div class="flex items-center justify-center mt-4 text-red-500 gap-2">
+    <img src="images/warning.png" style="max-width: 100%; height: auto;" alt="warning">
+    <p>Monthly payment exceeds 40% of your salary.</p>
+  </div>
+
+  <div class="mt-4">
+    <a href="#" class="text-indigo-600 font-medium hover:underline">View details →</a>
+  </div>
+</section>
+
 
   <footer class="main0footer">
     <p>&copy; <script>document.write(new Date().getFullYear());</script> ~ Laksimi Aymane / ~ AN7M9K</p>
