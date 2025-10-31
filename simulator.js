@@ -83,15 +83,15 @@ els.calculationBtn.addEventListener('click', function() {
   }
 
  
-  els.monthlyPaymentEl.textContent = "$" + monthlyPayment.toFixed(2);
+  els.monthlyPaymentEl.textContent =  monthlyPayment.toFixed(2) + " MAD";
   
   // Calculate totals
   const totalToPay = monthlyPayment * durationInMonths;
   const totalInterest = totalToPay - Number(amount);
   
   // Display total interest and total to pay
-  els.totalInterestEl.textContent = "$" + totalInterest.toFixed(2);
-  els.totalToPayEl.textContent = "$" + totalToPay.toFixed(2);
+  els.totalInterestEl.textContent = totalInterest.toFixed(2) + ' MAD';
+  els.totalToPayEl.textContent = totalToPay.toFixed(2) + ' MAD';
 
   const salary = Number(els.salaryEl.value);
 
